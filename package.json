@@ -3,12 +3,13 @@
   "version":"0.0.1",
   "repository": {
     "type": "git",
-    "url": "git@github.com:neilmiddleton/nodejs-elasticsearch-sample.git"
+    "url": "git@github.com:jimoconnell/nodejs-elasticsearch-sample.git"
   },
   "dependencies": {
       "express":"2.5.x",
       "jade":">= 0.0.1",
-      "elasticsearchclient":">=0.2.1"
+      "elasticsearchclient":">=0.2.1",
+      "momentjs" : "latest"
   },
   "engines":{
     "node":"0.10.x"
