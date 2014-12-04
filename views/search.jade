@@ -1,15 +1,45 @@
 .page-header
     h3 Search Results
 
+.container
+    .span12
 .row
     .span12
         table.table.table-bordered
             thead
                 tr
-                    th Name
-                    th Text
+                    th id
+                    th claim_rep
+                    th clientCode
+                    th department
+                    th label
+                    th diary_date
+                    th policy_id
+                    th date_of_loss
+                    th creation_date
+                    th accepted
+                    th claim_number
+                    th
+                      .span6 description
+                    th clientName
+                    th update_date
+                    th current_state
+
             tbody
-                each document in result.hits.hits
+                each claim in result.hits.hits
                   tr
-                    td= document._source.name
-                    td= document._source.text
+                    td= claim._source.id
+                    td= claim._source.claim_rep
+                    td= claim._source.clientCode
+                    td= claim._source.department
+                    td= claim._source.label
+                    td= claim._source.diary_date
+                    td= claim._source.policy_id
+                    td= claim._source.date_of_loss
+                    td= claim._source.creation_date
+                    td= claim._source.accepted
+                    td= claim._source.claim_number
+                    td= claim._source.description
+                    td= claim._source.clientName
+                    td= claim._source.update_date
+                    td= claim._source.current_state

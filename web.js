@@ -5,6 +5,7 @@ var express = require('express'),
 var app = module.exports = express.createServer();
 
 var connectionString = url.parse(process.env.BONSAI_URL);
+var connectionString = url.parse(process.env.BONSAI_URL);
 
 var serverOptions = {
     host: connectionString.hostname,
@@ -18,11 +19,10 @@ var serverOptions = {
 
 var elasticSearchClient = new ElasticSearchClient(serverOptions);
 
-var _index = "sample";
-var _type = 'document';
+var _index = "claims";
+var _type = 'claim';
 
 // Configuration
-
 app.configure(function () {
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
@@ -108,3 +108,6 @@ var port = process.env.PORT || 3000;
 app.listen(port, function () {
     console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
+var moment = require('moment');
+
+app.locals.title = 'My App';

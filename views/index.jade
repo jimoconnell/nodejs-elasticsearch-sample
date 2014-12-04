@@ -1,11 +1,11 @@
 .row
     .span12
         .hero-unit
-          h1 Heroku + Node.js
+          h1 Pilot Search
           br
-          p This example illustrates basic search features of Heroku & ElasticSearch as service.
+          p Pilot Search for Navigator
 
-          p Type “*” or “cloud” to search box and hit enter for sample search results.
+          p Type “*” to search for any result.
 
         if result
           if (result == "Error: connect ECONNREFUSED")
@@ -13,5 +13,5 @@
           else
             p= result
         else
-          p To create initial index and sample data click
-              a(href='/index')= ' Create Sample Index & Data! '
+        //  p To create initial index and sample data click
+          //    a(href='/index')= ' Create Sample Index & Data! '

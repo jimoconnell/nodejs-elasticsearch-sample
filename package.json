@@ -1,6 +1,10 @@
 {
   "name":"heroku-node.js-sample",
   "version":"0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:neilmiddleton/nodejs-elasticsearch-sample.git"
+  },
   "dependencies": {
       "express":"2.5.x",
       "jade":">= 0.0.1",
